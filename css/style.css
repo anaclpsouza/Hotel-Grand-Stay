@@ -29,7 +29,25 @@
   --color-error: #C62828;
   --color-warning: #EF6C00;
   --color-info: #1565C0;
+  --color-primary:          #C5A880;
+  --color-primary-hover:    #AA8B62;
+  --color-secondary:        #1A2B3C;
+  --color-secondary-hover:  #263E57;
+  --color-bg-main:          #FBF9F5;
+  --color-text-muted:       #767E86;
+  --color-sucess:           #2E7D32;
+  --color-error:            #C62828;
+  --color-warning:          #EF6C00;
+  --color-info:             #1565C0;
+  --color-white:            #FFFFFF;
+  --color-border:           #E8E2D9;
+  --color-overlay:          rgba(26, 43, 60, 0.55);
 }
+
+
+/* ============================================================
+   RESET
+   ============================================================ */
 
 *,
 *::before,
@@ -39,14 +57,46 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-body);
   font-size: 14px;         
   font-weight: var(--fw-regular);
   line-height: 1.5;
+  min-height: 100vh;
 
   color: var(--color-secondary);
+  background-color: var(--color-white);
+
+  display: flex;
+  flex-direction: column;
 }
+
+main {
+  flex: 1;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* ============================================================
+   TIPOGRAFIA
+   ============================================================ */
 
 h1 {
   font-family: var(--font-heading);
@@ -116,53 +166,430 @@ p {
 
 /* ============================================================
    TABLET 
+   BOTÕES
+   ============================================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 36px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: var(--fw-semibold);
+  line-height: 1;
+  letter-spacing: 0;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-secondary);
+  border: 1.5px solid var(--color-secondary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-secondary);
+  border: 1.5px solid var(--color-secondary);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+
+/* ============================================================
+   NAV
+   ============================================================ */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: var(--color-bg-main);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.nav-logo img {
+  height: 40px;
+  width: auto;
+}
+
+.nav-logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-logo-name {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: var(--fw-bold);
+  color: var(--color-secondary);
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.nav-logo-sub {
+  font-family: var(--font-body);
+  font-size: 9px;
+  font-weight: var(--fw-medium);
+  color: var(--color-text-muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.nav-checkbox {
+  display: none;
+}
+
+.nav-toggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 12px 4px;
+  position: relative;
+  z-index: 102;
+}
+
+.nav-toggle span,
+.nav-toggle span::before,
+.nav-toggle span::after {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-secondary);
+}
+
+.nav-toggle span {
+  position: relative;
+}
+
+.nav-toggle span::before,
+.nav-toggle span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.nav-toggle span::before {
+  top: -8px;
+}
+
+.nav-toggle span::after {
+  top: 8px;
+}
+
+.nav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: var(--color-overlay);
+  z-index: 101;
+}
+
+.nav-menu {
+  display: none;
+  position: fixed;
+  top: 73px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-white);
+  flex-direction: column;
+  padding: 32px 20px;
+  gap: 8px;
+  overflow-y: auto;
+  z-index: 102;
+}
+
+.nav-checkbox:checked ~ .nav-menu {
+  display: flex;
+}
+
+.nav-checkbox:checked ~ .nav-overlay {
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-link {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: var(--fw-medium);
+  color: var(--color-secondary);
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-border);
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-primary);
+}
+
+.nav-actions {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.footer {
+  background-color: var(--color-bg-main);
+  color: var(--color-secondary);
+  padding: 48px 20px 24px;
+  margin-top: auto;
+}
+
+.footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo img {
+  height: 44px;
+  width: auto;
+}
+
+.footer-logo-name {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: var(--fw-bold);
+  color: var(--color-secondary);
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.footer-logo-sub {
+  font-family: var(--font-body);
+  font-size: 9px;
+  font-weight: var(--fw-medium);
+  color: var(--color-primary);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.footer-tagline {
+  color: var(--color-text-muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.footer-col-title {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+.footer-col p,
+.footer-col address {
+  color: var(--color-text-muted);
+  font-size: 13px;
+  line-height: 1.7;
+  font-style: normal;
+}
+
+.footer-col a {
+  color: var(--color-text-muted);
+  font-size: 13px;
+  transition: color 0.2s ease;
+}
+
+.footer-col a:hover {
+  color: var(--color-primary);
+}
+
+.footer-social {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  color: var(--color-secondary);
+  font-size: 14px;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.footer-social a:hover {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.footer-bottom {
+  padding-top: 24px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: var(--color-text-muted);
+  font-size: 12px;
+}
+
+
+/* ============================================================
+   TABLET — min-width: 768px
    ============================================================ */
 
 @media (min-width: 768px) {
-  body {
-    font-size: 16px;        
+  .btn {
+    min-height: 44px;
+    padding: 12px 24px;
   }
 
-  h1 {
-    font-size: 40px;        
+  body  { font-size: 16px; }
+  h1    { font-size: 40px; }
+  h2    { font-size: 36px; }
+  h3    { font-size: 24px; }
+  p     { font-size: 16px; }
+  .display-hero  { font-size: 64px; }
+  .body-large    { font-size: 20px; }
+  .body-small    { font-size: 14px; }
+  .button-text   { font-size: 15px; }
+  .overline      { font-size: 12px; }
+
+  .nav-toggle,
+  .nav-checkbox,
+  .nav-overlay {
+    display: none !important;
   }
 
-  h2 {
-    font-size: 36px;        
+  .nav-menu {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 0;
+    overflow: visible;
+    background: none;
   }
 
-  h3 {
-    font-size: 24px;        
+  .nav-links {
+    flex-direction: row;
+    gap: 0;
   }
 
-  p {
-    font-size: 16px;        
+  .nav-link {
+    font-size: 14px;
+    padding: 8px 16px;
+    border-bottom: none;
+    border-bottom: 2px solid transparent;
   }
 
-  .display-hero {
-    font-size: 64px;       
+  .nav-link:hover,
+  .nav-link.active {
+    border-bottom-color: var(--color-primary);
+    color: var(--color-secondary);
   }
 
-  .body-large {
-    font-size: 20px;        
+  .nav-actions {
+    margin-top: 0;
+    flex-direction: row;
+    gap: 8px;
   }
 
-  .body-small {
-    font-size: 14px;    
-  }
-
-  .button-text {
-    font-size: 15px;       
-  }
-
-  .overline {
-    font-size: 12px;        
+  /* Footer */
+  .footer-top {
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
   }
 }
+
 
 /* ============================================================
    DESKTOP 
    ============================================================ */
 @media (min-width: 1280px) {
-    
+
+
+  .nav-inner {
+    padding: 16px 40px;
+  }
+
+  .footer {
+    padding: 64px 40px 32px;
+  }
 }

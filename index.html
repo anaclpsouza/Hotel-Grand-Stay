@@ -1,13 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grand Stay | Hotel</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grand Stay | Hotel</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grand Stay | Hotel & Resort</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Grand Stay – página inicial">
+        <img src="assets/icons/Logo.svg" alt="Logo Grand Stay">
+        <div class="nav-logo-text">
+          <span class="nav-logo-name">Grand Stay</span>
+          <span class="nav-logo-sub">Hotel &amp; Resort</span>
+        </div>
+      </a>
+
+      <input type="checkbox" id="menu-toggle" class="nav-checkbox">
+      <label for="menu-toggle" class="nav-overlay" aria-label="Fechar menu"></label>
+      <label for="menu-toggle" class="nav-toggle" aria-label="Abrir menu">
+        <span></span>
+      </label>
+
+      <nav id="nav-menu" class="nav-menu" aria-label="Menu principal">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="quartos.html" class="nav-link">Quartos</a></li>
+          <li><a href="estrutura.html" class="nav-link">Estrutura</a></li>
+          <li><a href="experiencias.html" class="nav-link">Experiências</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="reserva.html" class="btn btn-primary">[ Reservar ]</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Bem-vindo ao Grand Stay">
+      <img class="hero-img" src="assets/img/hall-entrada-hotel.svg" alt="Hall de entrada do Grand Stay Hotel & Resort">
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <p class="hero-overline overline"><i class="fa-solid fa-square"></i> Uma experiência inesquecível</p>
+          <h1 class="hero-title display-hero">Bem-vindo ao Grand Stay Hotel &amp; Resort</h1>
+          <p class="hero-description body-large">
+            Arquitetura refinada, serviço de excelência e experiências singulares à beira-mar.
+            Reserve estadias exclusivas com suporte total a personalização de suítes.
+          </p>
+        </div>
+        <div class="hero-actions">
+          <a href="#" class="btn btn-primary">[ Ver Quartos ]</a>
+          <a href="#" class="btn btn-secondary">[ Estrutura &amp; Lazer ]</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-search" aria-label="Busca rápida de disponibilidade">
+      <h2 class="quick-search-title">Barra de Busca Rápida</h2>
+      <form class="quick-search-form" action="reserva.html" method="get">
+        <div class="quick-search-field">
+          <label class="quick-search-label" for="checkin">            <i class="fa-solid fa-calendar-days" aria-hidden="true"></i> Entrada (Check-in)</label>
+          <div class="quick-search-input-wrap">
+            <input class="quick-search-input" type="date" id="checkin" name="checkin" aria-label="Data de entrada">
+          </div>
+        </div>
+
+        <div class="quick-search-field">
+          <label class="quick-search-label" for="checkout"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i> Saída (Check-out)</label>
+          <div class="quick-search-input-wrap">
+            <input class="quick-search-input" type="date" id="checkout" name="checkout" aria-label="Data de saída">
+          </div>
+        </div>
+
+        <div class="quick-search-field">
+          <label class="quick-search-label" for="hospedes">Hóspedes</label>
+          <div class="quick-search-input-wrap">
+            <i class="fa-solid fa-user" aria-hidden="true"></i>
+            <select class="quick-search-input" id="hospedes" name="hospedes" aria-label="Número de hóspedes">
+              <option value="1">1 Hóspede</option>
+              <option value="2" selected>2 Hóspedes</option>
+              <option value="3">3 Hóspedes</option>
+              <option value="4">4+ Hóspedes</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary quick-search-btn">[ Checar Disponibilidade ]</button>
+      </form>
+    </section>
+
+    <section class="section" aria-labelledby="rooms-heading">
+      <div class="section-inner">
+        <header class="section-header">
+          <p class="overline"><i class="fa-solid fa-square"></i> Conforto e Lazer</p>
+          <h2 class="section-title" id="rooms-heading">Acomodações em Destaque</h2>
+          <p class="section-subtitle">Conheça nossos quartos projetados para oferecer conforto e descanso a cada
+            momento.</p>
+        </header>
+
+        <ul class="rooms-grid">
+          <li class="room-card">
+            <img class="room-card-img" src="assets/img/suite-master.svg" alt="Suíte Master do Grand Stay">
+            <div class="room-card-body">
+              <p class="overline">até 2 pessoas</p>
+              <h3 class="room-card-name">Suíte Master</h3>
+              <p class="room-card-desc">Amplo quarto com sofá-cama premium, vista privilegiada e atendimento de mordomo
+                sob demanda.</p>
+              <ul class="room-card-amenities">
+                <li class="room-card-amenity">
+                  <i class="fa-solid fa-bed" aria-hidden="true"></i>
+                  Cama King
+                </li>
+                <li class="room-card-amenity">
+                  <i class="fa-solid fa-wifi" aria-hidden="true"></i>
+                  Wi-Fi
+                </li>
+                <li class="room-card-amenity">
+                  <i class="fa-solid fa-tv" aria-hidden="true"></i>
+                  Smart TV
+                </li>
+              </ul>
+              <div class="room-card-footer">
+                <div>
+                  <p class="room-card-price-label">a partir de</p>
+                  <p class="room-card-price">R$ 1.006 <span>/noite</span></p>
+                </div>
+                <a href="detalhes-quarto.html" class="btn btn-outline">Ver Detalhes</a>
+              </div>
+            </div>
+          </li>
+
+          <li class="room-card">
+            <img class="room-card-img" src="assets/img/casal-deluxe.svg" alt="Quarto Casal Deluxe do Grand Stay">
+            <div class="room-card-body">
+              <p class="overline">até 2 pessoas</p>
+              <h3 class="room-card-name">Quarto Casal Deluxe</h3>
+              <p class="room-card-desc">Elegante e sofisticado, com decoração autoral, banheira de hidromassagem e vista
+                para o jardim.</p>
+              <ul class="room-card-amenities">
+                <li class="room-card-amenity">
+                  <i class="fa-solid fa-bed" aria-hidden="true"></i>
+                  Cama Queen
+                </li>
+                <li class="room-card-amenity">
+                  <i class="fa-solid fa-wifi" aria-hidden="true"></i>
+                  Wi-Fi
+                </li>
+                <li class="room-card-amenity">
+                  <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                  Banheira
+                </li>
+              </ul>
+              <div class="room-card-footer">
+                <div>
+                  <p class="room-card-price-label">a partir de</p>
+                  <p class="room-card-price">R$ 1.290 <span>/noite</span></p>
+                </div>
+                <a href="detalhes-quarto.html" class="btn btn-outline">Ver Detalhes</a>
+              </div>
+            </div>
+          </li>
+
+          <li class="room-card">
+            <img class="room-card-img" src="assets/img/bangalo-familia.svg" alt="Bangalô Família do Grand Stay">
+            <div class="room-card-body">
+              <p class="overline">até 4 pessoas</p>
+              <h3 class="room-card-name">Bangalô Família</h3>
+              <p class="room-card-desc">Espaço generoso com dois quartos, sala integrada e acesso direto à piscina
+                privativa.</p>
+              <ul class="room-card-amenities">
+                <li class="room-card-amenity">
+                  <i class="fa-solid fa-bed" aria-hidden="true"></i>
+                  2 Quartos
+                </li>
+                <li class="room-card-amenity">
+                  <i class="fa-solid fa-wifi" aria-hidden="true"></i>
+                  Wi-Fi
+                </li>
+                <li class="room-card-amenity">
+                  <i class="fa-solid fa-water-ladder"></i>
+                  Piscina Privativa
+                </li>
+              </ul>
+              <div class="room-card-footer">
+                <div>
+                  <p class="room-card-price-label">a partir de</p>
+                  <p class="room-card-price">R$ 1.400 <span>/noite</span></p>
+                </div>
+                <a href="detalhes-quarto.html" class="btn btn-outline">Ver Detalhes</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="rooms-cta">
+          <a href="quartos.html" class="btn btn-primary">[ Ver Todos os Quartos ]</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="leisure section--alt" aria-labelledby="leisure-heading">
+      <div class="leisure-inner">
+        <div class="leisure-content">
+          <p class="overline"><i class="fa-solid fa-square"></i> Lazer &amp; Gastronomia</p>
+          <h2 id="leisure-heading">Experiência Completa de Lazer e Gastronomia</h2>
+          <p class="leisure-description">
+            Muito além do descanso, projetamos uma infraestrutura densa e refinada para proporcionar o bem-estar dos
+            nossos hóspedes. Ambientes naturalmente climatizados e atendimento personalizado em cada setor.
+          </p>
+
+          <ul class="leisure-features">
+            <li class="leisure-feature">
+              <div class="leisure-feature-icon" aria-hidden="true">
+                <i class="fa-solid fa-person-swimming"></i>
+              </div>
+              <div class="leisure-feature-text">
+                <h3>Piscinas Aquecidas</h3>
+                <p>Três piscinas com temperatura controlada, incluindo área infantil e espaço adulto exclusivo.</p>
+              </div>
+            </li>
+
+            <li class="leisure-feature">
+              <div class="leisure-feature-icon" aria-hidden="true">
+                <i class="fa-solid fa-utensils"></i>
+              </div>
+              <div class="leisure-feature-text">
+                <h3>Restaurante Premiado</h3>
+                <p>Gastronomia autoral com ingredientes locais e carta de vinhos selecionada por sommeliers.</p>
+              </div>
+            </li>
+
+            <li class="leisure-feature">
+              <div class="leisure-feature-icon" aria-hidden="true">
+                <i class="fa-solid fa-spa"></i>
+              </div>
+              <div class="leisure-feature-text">
+                <h3>Spa Exclusivo</h3>
+                <p>Tratamentos personalizados com técnicas orientais e produtos orgânicos nacionais.</p>
+              </div>
+            </li>
+          </ul>
+
+          <a href="estrutura.html" class="btn btn-primary leisure-cta">[Conhecer Estrutura]</a>
+        </div>
+
+        <div class="leisure-img-wrap">
+          <img class="leisure-img" src="assets/img/piscina.svg"
+            alt="Área de piscina do Grand Stay Hotel & Resort com espreguiçadeiras e palmeiras">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="Grand Stay – página inicial">
+            <img src="assets/icons/Logo.svg" alt="Logo Grand Stay">
+            <div>
+              <p class="footer-logo-name">Grand Stay</p>
+              <p class="footer-logo-sub">Hotel &amp; Resort</p>
+            </div>
+          </a>
+          <p class="footer-tagline">Sofisticação e conforto em cada detalhe, para uma estadia verdadeiramente
+            inesquecível.</p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Localização</p>
+          <address>
+            Av. Beira Mar, 1500 – Bloco B<br>
+            Grand Stay – CEP 50000-10<br>
+            Recife, PE – Brasil
+          </address>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Contato</p>
+          <p>
+            <a href="tel:+558100000000">Tel: (81) 0000-0000</a><br>
+            <a href="tel:+5581900000000">WhatsApp: (81) 90000-0000</a><br>
+            <a href="mailto:contato@grandstay.com.br">contato@grandstay.com.br</a>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Redes &amp; Canais</p>
+          <nav class="footer-social" aria-label="Redes sociais">
+            <a href="#" aria-label="Instagram do Grand Stay">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="#" aria-label="Facebook do Grand Stay">
+              <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+            </a>
+            <a href="#" aria-label="YouTube do Grand Stay">
+              <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+            </a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Grand Stay Hotel. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
 </body>
+
 </html>

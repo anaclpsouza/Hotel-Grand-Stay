@@ -1,0 +1,585 @@
+/* Layout */
+.reserva-page {
+  padding-bottom: 48px;
+}
+
+.reserva-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.reserva-layout {
+  display: flex;
+  flex-direction: column-reverse; 
+  gap: 24px;
+}
+
+@media (min-width: 992px) {
+  .reserva-layout {
+    flex-direction: row; 
+    align-items: flex-start;
+  }
+}
+
+.reserva-form-col {
+  flex: 1;
+  max-width: 100%;
+}
+
+/* Resumo da Estadia */
+.reserva-summary-col {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .reserva-summary-col {
+    width: 440px;
+    position: sticky;
+    top: 120px;
+  }
+}
+
+.reserva-header {
+  margin-bottom: 24px;
+}
+
+.reserva-title {
+  font-family: var(--font-heading);
+  color: var(--color-secondary);
+  margin-bottom: 4px;
+}
+
+.reserva-subtitle {
+  color: var(--color-text-muted);
+}
+
+/* Passos do Checkout */
+.checkout-step {
+  margin-bottom: 32px;
+}
+
+
+.checkout-step-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.step-number {
+  background-color: var(--color-primary);
+  color: var(--color-bg-main);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-title {
+  font-family: var(--font-heading);
+  color: var(--color-secondary);
+  margin: 0;
+}
+
+
+
+/* Formulário */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  /* Formulário */
+.form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .col-full {
+    grid-column: 1 / -1;
+  }
+  .col-half {
+    grid-column: span 1;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-group label, .label-with-hint label {
+  
+  font-weight: 600;
+  color: var(--color-secondary);
+}
+
+.label-with-hint {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-group input, 
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px 8px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-white);
+  font-family: var(--font-body);
+  
+  color: var(--color-secondary);
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon i {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper select {
+  appearance: none;
+  padding-right: 40px;
+}
+
+.select-wrapper .select-icon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--color-text-muted);
+}
+
+/* Métodos de Pagamento */
+.payment-methods {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  /* Métodos de Pagamento */
+.payment-methods {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.payment-radio {
+  display: none;
+}
+
+.payment-label {
+  display: block;
+  padding: 16px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg-main);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.payment-label-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.radio-circle {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--color-border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radio-circle::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.payment-name {
+  font-weight: 700;
+  color: var(--color-secondary);
+}
+
+.payment-icon {
+  margin-left: auto;
+  
+  color: var(--color-secondary);
+}
+
+.badge-discount {
+  margin-left: auto;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+
+.payment-desc {
+  display: block;
+  
+  color: var(--color-text-muted);
+  padding-left: 24px;
+}
+
+.payment-radio:checked + .payment-label {
+  border-color: var(--color-secondary);
+}
+
+.payment-radio:checked + .payment-label .radio-circle {
+  border-color: var(--color-secondary);
+}
+
+.payment-radio:checked + .payment-label .radio-circle::after {
+  opacity: 1;
+}
+
+.credit-card-form {
+  display: none;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.pix-info {
+  display: none;
+  padding: 16px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  
+  color: var(--color-secondary);
+  text-align: center;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+#pay-credit:checked ~ .credit-card-form {
+  display: block;
+}
+
+#pay-pix:checked ~ .pix-info {
+  display: block;
+}
+
+/* Termos */
+.checkout-terms {
+  margin-bottom: 24px;
+}
+
+.terms-checkbox {
+  display: none;
+}
+
+.terms-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.checkbox-box {
+  width: 16px;
+  height: 16px;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.terms-checkbox:not(:checked) + .terms-label .checkbox-box {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  color: transparent;
+}
+
+.terms-text {
+  
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.terms-text b {
+  color: var(--color-secondary);
+  text-decoration: underline;
+}
+
+.btn-confirm-reserva {
+  width: 100%;
+  padding: 16px;
+}
+
+/* Resumo da Estadia */
+.reserva-summary-col {
+  background-color: transparent;
+}
+
+.summary-header-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.summary-title {
+  font-family: var(--font-heading);
+  color: var(--color-secondary);
+}
+
+
+
+.summary-card {
+  background-color: var(--color-bg-main);
+  border: 1px solid var(--color-border);
+  padding: 24px;
+  border-radius: 12px;
+}
+
+.summary-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.summary-room-name {
+  font-family: var(--font-heading);
+  
+  color: var(--color-secondary);
+  margin-bottom: 4px;
+}
+
+.summary-room-specs {
+  
+  color: var(--color-text-muted);
+  margin-bottom: 16px;
+}
+
+.summary-dates {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.date-box {
+  border: 1px solid var(--color-border);
+  padding: 12px;
+  border-radius: 8px;
+  background-color: var(--color-white);
+}
+
+
+
+.date-value {
+  display: block;
+  font-weight: 700;
+  color: var(--color-secondary);
+  
+  margin-bottom: 2px;
+}
+
+.date-desc {
+  display: block;
+  
+  color: var(--color-text-muted);
+}
+
+.summary-info-list {
+  margin-bottom: 16px;
+}
+
+.info-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.info-label {
+  color: var(--color-text-muted);
+}
+
+.info-value {
+  font-weight: 600;
+  color: var(--color-secondary);
+}
+
+.summary-divider {
+  height: 1px;
+  background-color: var(--color-border);
+  margin: 24px 0;
+}
+
+
+
+.billing-list {
+  margin-bottom: 16px;
+}
+
+.billing-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.billing-desc {
+  color: var(--color-text-muted);
+}
+
+.billing-val {
+  font-weight: 700;
+  color: var(--color-secondary);
+}
+
+.val-dim {
+  color: var(--color-text-muted);
+  font-weight: 400;
+}
+
+.summary-total-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.total-label {
+  display: block;
+  font-weight: 700;
+  color: var(--color-secondary);
+  margin-bottom: 2px;
+}
+
+.total-desc {
+  display: block;
+  
+  color: var(--color-text-muted);
+}
+
+.total-amount {
+  
+  font-weight: 700;
+  color: var(--color-secondary);
+  text-align: right;
+  line-height: 1;
+}
+
+.total-installments {
+  
+  color: var(--color-text-muted);
+  text-align: right;
+  margin-top: 4px;
+}
+
+.security-badges {
+  display: flex;
+  gap: 4px;
+}
+
+.badge {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid var(--color-border);
+  padding: 8px;
+}
+
+.badge i {
+  color: var(--color-sucess);
+}
+
+.badge-blue i {
+  color: var(--color-info);
+}
+
+.badge div {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge strong {
+  
+  color: var(--color-secondary);
+}
+
+.badge span {
+  
+  color: var(--color-text-muted);
+}
+
+/* Lógica Dinâmica */
+.dynamic-content {
+  display: none;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.room-target {
+  position: absolute;
+  top: -100px;
+}
+
+.reserva-container:has(#suite-panoramica:target) .content-panoramica {
+  display: block;
+}
+
+.reserva-container:has(#suite-master:target) .content-master {
+  display: block;
+}
+
+.reserva-container:has(#casal:target) .content-casal {
+  display: block;
+}
+
+.reserva-container:has(#familia:target) .content-familia {
+  display: block;
+}
+
+.reserva-container:not(:has(.room-target:target)) .content-panoramica {
+  display: block;
+}

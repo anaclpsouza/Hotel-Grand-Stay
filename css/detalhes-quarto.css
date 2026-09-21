@@ -1,0 +1,435 @@
+/* ============================================================
+   PÁGINA DE DETALHES DO QUARTO
+   ============================================================ */
+
+.room-details-page {
+  min-width: 0;
+}
+
+.room-details-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.room-target {
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+}
+
+.dynamic-content {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.room-details-container:has(#suite-panoramica:target) .content-panoramica,
+.room-details-container:has(#suite-master:target) .content-master,
+.room-details-container:has(#casal:target) .content-casal,
+.room-details-container:has(#familia:target) .content-familia {
+  display: block;
+}
+
+/* fallback padrão */
+.room-details-container:not(:has(.room-target:target)) .content-panoramica {
+  display: block;
+}
+
+/* isso serve para criar uma animação dos cards subindo debaixo pra cima ao entrar na tela */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- LAYOUT GERAL --- */
+
+.room-gallery {
+  margin-bottom: 32px;
+}
+
+.room-gallery-main {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.room-gallery-thumbs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.room-gallery-thumbs img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.room-info-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+/* --- HEADER DO QUARTO (Tags, Titulo) --- */
+
+.room-header {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.room-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.room-tag {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: var(--fw-bold);
+  padding: 4px 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 4px;
+}
+
+.room-tag--light {
+  background-color: var(--color-bg-main);
+  color: var(--color-secondary);
+}
+
+.room-header h1 {
+  font-size: 28px;
+  margin-bottom: 12px;
+  color: var(--color-secondary);
+}
+
+.room-header-desc {
+  font-size: 16px;
+  color: var(--color-text-muted);
+}
+
+/* --- ESPECIFICAÇÕES --- */
+
+.room-specs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  background-color: var(--color-bg-main);
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+.room-spec {
+  display: flex;
+  flex-direction: column;
+}
+
+.room-spec-label {
+  font-size: 10px;
+  font-weight: var(--fw-bold);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.room-spec-value {
+  font-size: 14px;
+  font-weight: var(--fw-medium);
+  color: var(--color-secondary);
+}
+
+/* --- SEÇÕES DE CONTEÚDO (Descrição, Itens, Regras) --- */
+
+.room-section {
+  margin-bottom: 40px;
+}
+
+.room-section-title {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: var(--fw-bold);
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.room-section-title::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-primary);
+}
+
+.room-description-text {
+  color: var(--color-text-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.room-description-text p {
+  margin-bottom: 16px;
+}
+
+/* --- ITENS INCLUSOS --- */
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.amenity-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.amenity-title {
+  font-size: 14px;
+  font-weight: var(--fw-bold);
+  color: var(--color-secondary);
+}
+
+.amenity-desc {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+/* --- REGRAS --- */
+
+.rules-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.rule-card {
+  background-color: var(--color-bg-main);
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.rule-icon {
+  font-size: 20px;
+  color: var(--color-secondary);
+}
+
+.rule-info h4 {
+  font-size: 14px;
+  font-weight: var(--fw-bold);
+  color: var(--color-secondary);
+  margin-bottom: 4px;
+}
+
+.rule-info p {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+/* --- CARD DE RESERVA LATERAL --- */
+
+.reservation-card {
+  background-color: var(--color-bg-main);
+  border: 1px solid var(--color-border);
+  padding: 12px 24px;
+  border-radius: 8px;
+  position: sticky;
+  top: 100px;
+}
+
+.reservation-price {
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.price-value {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: var(--fw-bold);
+  color: var(--color-secondary);
+}
+
+.price-value span {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: var(--fw-regular);
+  color: var(--color-text-muted);
+}
+
+.price-tax {
+  font-size: 10px;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 4px;
+}
+
+.reservation-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.res-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.res-label {
+  font-size: 10px;
+  font-weight: var(--fw-bold);
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.res-value {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.res-value i {
+  margin-right: 4px;
+}
+
+.res-date-input {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 4px;
+  background-color: var(--color-white);
+  width: 100%;
+  margin-top: 4px;
+}
+
+.reservation-summary {
+  background-color: var(--color-white);
+  padding: 16px;
+  border-radius: 6px;
+  margin: 24px 0;
+}
+
+.res-summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-bottom: 8px;
+}
+
+.res-summary-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+  font-weight: var(--fw-bold);
+  color: var(--color-secondary);
+}
+
+.res-summary-total .total-label {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.res-summary-total .total-label span {
+  display: block;
+  font-size: 10px;
+  font-weight: var(--fw-regular);
+  color: var(--color-text-muted);
+}
+
+.res-summary-total .total-value {
+  font-size: 20px;
+}
+
+.btn-reserve-full {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.free-cancellation {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.free-cancellation i {
+  color: var(--color-secondary);
+  margin-top: 2px;
+}
+
+/* ============================================================
+   RESPONSIVIDADE (TABLET / DESKTOP)
+   ============================================================ */
+
+@media (min-width: 768px) {
+  .room-gallery-main {
+    height: 400px;
+  }
+
+  .room-gallery-thumbs img {
+    height: 140px;
+  }
+
+  .room-header h1 {
+    font-size: 36px;
+  }
+
+  .room-specs {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .amenities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rules-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .room-details-page {
+    margin-top: 56px;
+  }
+
+  .room-gallery-main {
+    height: 500px;
+  }
+
+  .room-gallery-thumbs img {
+    height: 180px;
+  }
+  
+  .room-info-layout {
+    grid-template-columns: 2fr 1fr;
+    align-items: flex-start;
+  }
+}

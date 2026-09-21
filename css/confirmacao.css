@@ -1,0 +1,294 @@
+/* ============================================================
+   PÁGINA DE CONFIRMAÇÃO DE RESERVA
+   ============================================================ */
+
+.confirmacao-page {
+  min-width: 0;
+}
+
+.confirmacao-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  position: relative;
+}
+
+.room-target {
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+}
+
+.dynamic-content {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.confirmacao-container:has(#suite-panoramica:target) .content-panoramica,
+.confirmacao-container:has(#suite-master:target) .content-master,
+.confirmacao-container:has(#casal:target) .content-casal,
+.confirmacao-container:has(#familia:target) .content-familia {
+  display: block;
+}
+
+.confirmacao-container:not(:has(.room-target:target)) .content-master {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.confirmacao-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.success-icon-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.success-icon-box i {
+  font-size: 48px;
+  color: var(--color-sucess);
+  margin-bottom: 8px;
+}
+
+.icon-label {
+  background-color: var(--color-secondary);
+  color: var(--color-bg-main);
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: var(--fw-bold);
+  padding: 4px 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 4px;
+}
+
+.confirmacao-header .overline {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.confirmacao-title {
+  font-family: var(--font-heading);
+  color: var(--color-sucess);
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.confirmacao-subtitle {
+  color: var(--color-text-muted);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.confirmation-card {
+  background-color: var(--color-bg-main);
+  border: 1px solid var(--color-border);
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 48px;
+}
+
+.card-header {
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+}
+
+.reservation-code {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  color: var(--color-secondary);
+  margin-top: 4px;
+}
+
+.card-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.grid-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.room-name {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  color: var(--color-secondary);
+  margin: 12px 0 4px;
+}
+
+.room-details {
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+.room-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.guest-info {
+  margin-bottom: 24px;
+}
+
+.guest-name {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  color: var(--color-secondary);
+  margin: 12px 0 4px;
+}
+
+.guest-doc {
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+.dates-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.date-box {
+  background-color: var(--color-bg-main);
+  border: 1px solid var(--color-border);
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.date-value {
+  display: block;
+  font-weight: 700;
+  color: var(--color-secondary);
+  font-size: 18px;
+  margin: 8px 0 4px;
+}
+
+.date-desc {
+  display: block;
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.summary-divider {
+  height: 1px;
+  background-color: var(--color-border);
+  margin: 32px 0;
+}
+
+.payment-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.payment-method {
+  color: var(--color-secondary);
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.total-paid {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-secondary);
+  margin-top: 8px;
+}
+
+/* --- AÇÕES --- */
+.confirmacao-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.confirmacao-actions .btn {
+  width: 100%;
+  text-align: center;
+}
+
+/* ============================================================
+   RESPONSIVIDADE (TABLET / DESKTOP)
+   ============================================================ */
+
+@media (min-width: 768px) {
+  .confirmacao-title {
+    font-size: 40px;
+  }
+
+  .confirmation-card {
+    padding: 40px;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-areas: 
+      "room guest-dates"
+      "images guest-dates";
+    gap: 24px 48px;
+  }
+
+  .grid-room { 
+    grid-area: room; 
+  }
+  .grid-guest-dates { 
+    grid-area: guest-dates; 
+  }
+  .grid-images { 
+    grid-area: images; 
+  }
+
+  .room-img {
+    height: 200px;
+  }
+
+  .dates-info {
+    flex-direction: row;
+  }
+
+  .date-box {
+    flex: 1;
+  }
+
+  .payment-info {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .payment-col {
+    flex: 1;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  .confirmacao-actions {
+    flex-direction: row;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .confirmacao-actions .btn {
+    width: auto;
+    min-width: 250px;
+  }
+}

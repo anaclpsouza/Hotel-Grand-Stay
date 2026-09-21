@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finalizar Reserva | Grand Stay Hotel &amp; Resort</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/reserva.css">
+</head>
+
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo" aria-label="Grand Stay – página inicial">
+        <img src="../assets/icons/Logo.svg" alt="Logo Grand Stay">
+        <div class="nav-logo-text">
+          <span class="nav-logo-name">Grand Stay</span>
+          <span class="nav-logo-sub">Hotel &amp; Resort</span>
+        </div>
+      </a>
+      <div class="nav-mobile-actions">
+        <a href="quartos.html" class="btn btn-primary">[ Reservar ]</a>
+        <a href="#" class="btn btn-primary btn-user" aria-label="Perfil do usuário">
+          <i class="fa-solid fa-user" aria-hidden="true"></i>
+        </a>
+      </div>
+      <input type="checkbox" id="menu-toggle" class="nav-checkbox">
+      <label for="menu-toggle" class="nav-overlay" aria-label="Fechar menu"></label>
+      <label for="menu-toggle" class="nav-toggle" aria-label="Abrir menu">
+        <span></span>
+      </label>
+      <nav id="nav-menu" class="nav-menu" aria-label="Menu principal">
+        <ul class="nav-links">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="quartos.html" class="nav-link">Quartos</a></li>
+          <li><a href="../estrutura.html" class="nav-link">Estrutura</a></li>
+          <li><a href="../experiencias.html" class="nav-link">Experiências</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="quartos.html" class="btn btn-primary">[ Reservar ]</a>
+          <a href="#" class="btn btn-primary btn-user" aria-label="Perfil do usuário">
+            <i class="fa-solid fa-user" aria-hidden="true"></i>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="reserva-page section">
+    <div class="reserva-container">
+
+      <div id="suite-panoramica" class="room-target"></div>
+      <div id="suite-master" class="room-target"></div>
+      <div id="casal" class="room-target"></div>
+      <div id="familia" class="room-target"></div>
+
+      <div class="reserva-layout">
+
+        <div class="reserva-form-col">
+          <header class="reserva-header">
+            <h1 class="reserva-title">Finalizar sua Reserva</h1>
+            <p class="reserva-subtitle">Preencha seus dados para garantir sua estadia no Grand Stay.</p>
+          </header>
+
+          <form action="#" class="checkout-form">
+
+            <section class="checkout-step">
+              <div class="checkout-step-header">
+                <span class="step-number">1</span>
+                <h2 class="step-title">DADOS DO HÓSPEDE TITULAR</h2>
+                <span class="overline">[OBRIGATÓRIO]</span>
+              </div>
+
+              <div class="form-grid">
+                <div class="form-group col-full">
+                  <label for="nome">Nome Completo *</label>
+                  <input type="text" id="nome" placeholder="[Nome do hóspede principal]" required>
+                </div>
+                <div class="form-group col-half">
+                  <label for="email">E-mail *</label>
+                  <input type="email" id="email" placeholder="[exemplo@dominio.com.br]" required>
+                </div>
+                <div class="form-group col-half">
+                  <label for="telefone">Telefone com DDD *</label>
+                  <input type="tel" id="telefone" placeholder="[(00) 00000-0000]" required>
+                </div>
+                <div class="form-group col-full">
+                  <label for="documento">CPF / Passaporte *</label>
+                  <input type="text" id="documento" placeholder="[000.000.000-00 ou Número do Passaporte]" required>
+                </div>
+                <div class="form-group col-full">
+                  <div class="label-with-hint">
+                    <label for="pedidos">Pedidos Especiais</label>
+                    <span class="overline">[OPCIONAL]</span>
+                  </div>
+                  <textarea id="pedidos" rows="3"
+                    placeholder="[Ex: berço para bebê, andar alto silencioso, cama de casal, restrições alimentares no café]"></textarea>
+                </div>
+              </div>
+            </section>
+
+            <section class="checkout-step">
+              <div class="checkout-step-header">
+                <span class="step-number">2</span>
+                <h2 class="step-title">FORMA DE PAGAMENTO</h2>
+                <span class="overline">[SELEÇÃO ÚNICA]</span>
+              </div>
+
+              <div class="payment-methods">
+                <input type="radio" id="pay-credit" name="payment_method" value="credit" class="payment-radio" checked>
+                <label for="pay-credit" class="payment-label">
+                  <div class="payment-label-header">
+                    <span class="radio-circle"></span>
+                    <span class="payment-name">Cartão de Crédito</span>
+                    <i class="fa-solid fa-credit-card payment-icon"></i>
+                  </div>
+                  <span class="payment-desc">Parcelamento em até 6x sem juros</span>
+                </label>
+
+                <input type="radio" id="pay-pix" name="payment_method" value="pix" class="payment-radio">
+                <label for="pay-pix" class="payment-label">
+                  <div class="payment-label-header">
+                    <span class="radio-circle"></span>
+                    <span class="payment-name">PIX Imediato</span>
+                    <span class="badge-discount">-5% OFF</span>
+                  </div>
+                  <span class="payment-desc">Aprovação imediata via QR Code</span>
+                </label>
+
+                <div class="credit-card-form">
+                  <div class="form-grid">
+                    <div class="form-group col-full">
+                      <label for="cc-num">Número do Cartão *</label>
+                      <div class="input-with-icon">
+                        <input type="text" id="cc-num" placeholder="[0000 0000 0000 0000]">
+                        <i class="fa-solid fa-lock"></i>
+                      </div>
+                    </div>
+                    <div class="form-group col-half">
+                      <label for="cc-val">Validade *</label>
+                      <input type="text" id="cc-val" placeholder="[MM / AA]">
+                    </div>
+                    <div class="form-group col-half">
+                      <label for="cc-cvv">CVV *</label>
+                      <input type="text" id="cc-cvv" placeholder="[000]">
+                    </div>
+                    <div class="form-group col-full">
+                      <label for="cc-name">Nome Impresso no Cartão *</label>
+                      <input type="text" id="cc-name" placeholder="[COMO GRAVADO NO CARTÃO]">
+                    </div>
+                    <div class="form-group col-full">
+                      <label for="cc-installments">Opção de Parcelamento *</label>
+                      <div class="select-wrapper">
+                        <select id="cc-installments">
+                          <option>1x de R$ 4.450,00 sem juros (À vista)</option>
+                          <option>2x de R$ 2.225,00 sem juros</option>
+                          <option>3x de R$ 1.483,33 sem juros</option>
+                          <option>4x de R$ 1.112,50 sem juros</option>
+                          <option>5x de R$ 890,00 sem juros</option>
+                          <option>6x de R$ 741,66 sem juros</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down select-icon"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pix-info">
+                  <p>Ao confirmar a reserva, um QR Code será gerado para pagamento imediato via PIX com 5% de desconto.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <div class="checkout-terms">
+              <input type="checkbox" id="terms" class="terms-checkbox" checked>
+              <label for="terms" class="terms-label">
+                <span class="checkbox-box"><i class="fa-solid fa-check"></i></span>
+                <span class="terms-text">
+                  Declaro que li e concordo com os <b>[Termos de Hospedagem]</b> e com as <b>[Políticas de
+                    Cancelamento]</b> (cancelamento gratuito até 48h antes da data de check-in).
+                </span>
+              </label>
+            </div>
+
+            <a href="confirmacao.html" class="btn btn-primary btn-confirm-reserva" style="display: block; text-align: center;">[ Confirmar Reserva ]</a>
+          </form>
+        </div>
+
+        <aside class="reserva-summary-col">
+          <div class="summary-header-box">
+            <h2 class="summary-title">RESUMO DA ESTADIA</h2>
+            <span class="overline">5 NOITES</span>
+          </div>
+
+          <div class="summary-card">
+
+            <div class="dynamic-content content-panoramica">
+              <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=800&q=80&fit=crop"
+                class="summary-img" alt="Suíte Panorâmica Luxo">
+              <h3 class="summary-room-name">Suíte Panorâmica Luxo</h3>
+              <p class="summary-room-specs">70m² &bull; Vista Mar Panorâmica &bull; Cama King Size</p>
+            </div>
+
+            <div class="dynamic-content content-master">
+              <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80&fit=crop"
+                class="summary-img" alt="Suíte Master Presidencial">
+              <h3 class="summary-room-name">Suíte Master</h3>
+              <p class="summary-room-specs">68m² &bull; Vista Mar Frontal &bull; Cama King Size Premium</p>
+            </div>
+
+            <div class="dynamic-content content-casal">
+              <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800&q=80&fit=crop"
+                class="summary-img" alt="Quarto Casal Deluxe">
+              <h3 class="summary-room-name">Quarto Casal Deluxe</h3>
+              <p class="summary-room-specs">68m² &bull; Vista Enseada &bull; Cama King Size Premium</p>
+            </div>
+
+            <div class="dynamic-content content-familia">
+              <img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?w=800&q=80&fit=crop"
+                class="summary-img" alt="Bangalô Família">
+              <h3 class="summary-room-name">Bangalô Família</h3>
+              <p class="summary-room-specs">68m² &bull; Nascente / Jardim &bull; 1 King + 2 Solteiro</p>
+            </div>
+
+            <div class="summary-dates">
+              <div class="date-box">
+                <span class="overline">CHECK-IN</span>
+                <span class="date-value">15/11/2024</span>
+                <span class="date-desc">A partir das 14:00</span>
+              </div>
+              <div class="date-box">
+                <span class="overline">CHECK-OUT</span>
+                <span class="date-value">20/11/2024</span>
+                <span class="date-desc">Até as 12:00</span>
+              </div>
+            </div>
+
+            <div class="summary-info-list">
+              <div class="info-row">
+                <span class="info-label">Ocupação:</span>
+                <span class="info-value">2 Adultos</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">Conexão:</span>
+                <span class="info-value">Wi-Fi Premium High-Speed</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">Regime alimentar:</span>
+                <span class="info-value">Café da Manhã Incluso</span>
+              </div>
+            </div>
+
+            <div class="summary-divider"></div>
+            <p class="overline">[DETALHAMENTO DE COBRANÇA]</p>
+
+            <div class="billing-list">
+              <div class="dynamic-content content-panoramica">
+                <div class="billing-row">
+                  <span class="billing-desc">5 diárias (R$ 1.500,00 / noite)</span>
+                  <span class="billing-val">R$ 7.500,00</span>
+                </div>
+              </div>
+              <div class="dynamic-content content-master">
+                <div class="billing-row">
+                  <span class="billing-desc">5 diárias (R$ 1.006,00 / noite)</span>
+                  <span class="billing-val">R$ 5.030,00</span>
+                </div>
+              </div>
+              <div class="dynamic-content content-casal">
+                <div class="billing-row">
+                  <span class="billing-desc">5 diárias (R$ 1.290,00 / noite)</span>
+                  <span class="billing-val">R$ 6.450,00</span>
+                </div>
+              </div>
+              <div class="dynamic-content content-familia">
+                <div class="billing-row">
+                  <span class="billing-desc">5 diárias (R$ 1.400,00 / noite)</span>
+                  <span class="billing-val">R$ 7.000,00</span>
+                </div>
+              </div>
+
+              <div class="billing-row">
+                <span class="billing-desc">Taxa de serviço e turismo (5%)</span>
+                <span class="billing-val val-dim">INCLUSA</span>
+              </div>
+              <div class="billing-row">
+                <span class="billing-desc">Estacionamento privativo c/ manobrista</span>
+                <span class="billing-val val-dim">CORTESIA</span>
+              </div>
+            </div>
+
+            <div class="summary-total-box">
+              <div class="total-left">
+                <span class="total-label">VALOR TOTAL</span>
+                <span class="total-desc">Impostos federais e municipais inclusos</span>
+              </div>
+              <div class="total-right">
+
+                <div class="dynamic-content content-panoramica">
+                  <div class="total-amount">R$ 7.500</div>
+                  <div class="total-installments">ou até 6x de R$ 1.250,00</div>
+                </div>
+
+                <div class="dynamic-content content-master">
+                  <div class="total-amount">R$ 5.030</div>
+                  <div class="total-installments">ou até 6x de R$ 838,33</div>
+                </div>
+
+                <div class="dynamic-content content-casal">
+                  <div class="total-amount">R$ 6.450</div>
+                  <div class="total-installments">ou até 6x de R$ 1.075,00</div>
+                </div>
+
+                <div class="dynamic-content content-familia">
+                  <div class="total-amount">R$ 7.000</div>
+                  <div class="total-installments">ou até 6x de R$ 1.166,66</div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="security-badges">
+              <div class="badge">
+                <i class="fa-regular fa-circle-check"></i>
+                <div>
+                  <strong>MELHOR PREÇO</strong>
+                  <span>Garantido pelo hotel</span>
+                </div>
+              </div>
+              <div class="badge badge-blue">
+                <i class="fa-solid fa-shield-halved"></i>
+                <div>
+                  <strong>AMBIENTE SEGURO</strong>
+                  <span>Criptografia SSL 256-bit</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-col footer-col-brand">
+          <a href="../index.html" class="footer-logo">
+            <img src="../assets/icons/Logo.svg" alt="Logo Grand Stay">
+            <div>
+              <p class="footer-logo-name">Grand Stay</p>
+              <p class="footer-logo-sub">Hotel &amp; Resort</p>
+            </div>
+          </a>
+          <p class="footer-tagline">Sofisticação e conforto em cada detalhe, para uma estadia verdadeiramente
+            inesquecível.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Links Rápidos</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="quartos.html">Acomodações</a></li>
+            <li><a href="../estrutura.html">Estrutura &amp; Lazer</a></li>
+            <li><a href="../experiencias.html">Experiências</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Endereço</h4>
+          <address>
+            Av. Beira Mar, 1000<br>
+            Praia do Encanto, Riviera<br>
+            CEP 88000-000, Brasil
+          </address>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Contato &amp; Reservas</h4>
+          <p>+55 (11) 4000-0000</p>
+          <p><a href="mailto:reservas@grandstay.com.br">reservas@grandstay.com.br</a></p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Grand Stay Hotel &amp; Resort. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

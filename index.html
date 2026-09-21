@@ -1,18 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
 <html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grand Stay | Hotel</title>
-  <link rel="stylesheet" href="css/style.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grand Stay | Hotel & Resort</title>
+  <title>Grand Stay | Hotel &amp; Resort</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
@@ -26,6 +21,13 @@
         </div>
       </a>
 
+      <div class="nav-mobile-actions">
+        <a href="pages/quartos.html" class="btn btn-primary">[ Reservar ]</a>
+        <a href="#" class="btn btn-primary btn-user" aria-label="Perfil do usuário">
+          <i class="fa-solid fa-user" aria-hidden="true"></i>
+        </a>
+      </div>
+
       <input type="checkbox" id="menu-toggle" class="nav-checkbox">
       <label for="menu-toggle" class="nav-overlay" aria-label="Fechar menu"></label>
       <label for="menu-toggle" class="nav-toggle" aria-label="Abrir menu">
@@ -35,12 +37,15 @@
       <nav id="nav-menu" class="nav-menu" aria-label="Menu principal">
         <ul class="nav-links">
           <li><a href="index.html" class="nav-link active">Home</a></li>
-          <li><a href="quartos.html" class="nav-link">Quartos</a></li>
+          <li><a href="pages/quartos.html" class="nav-link">Quartos</a></li>
           <li><a href="estrutura.html" class="nav-link">Estrutura</a></li>
           <li><a href="experiencias.html" class="nav-link">Experiências</a></li>
         </ul>
         <div class="nav-actions">
-          <a href="reserva.html" class="btn btn-primary">[ Reservar ]</a>
+          <a href="pages/quartos.html" class="btn btn-primary">[ Reservar ]</a>
+          <a href="#" class="btn btn-primary btn-user" aria-label="Perfil do usuário">
+            <i class="fa-solid fa-user" aria-hidden="true"></i>
+          </a>
         </div>
       </nav>
     </div>
@@ -48,7 +53,7 @@
 
   <main>
     <section class="hero" aria-label="Bem-vindo ao Grand Stay">
-      <img class="hero-img" src="assets/img/hall-entrada-hotel.svg" alt="Hall de entrada do Grand Stay Hotel & Resort">
+      <img class="hero-img" src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1600&q=85&fit=crop" alt="Hall de entrada do Grand Stay Hotel &amp; Resort">
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="hero-content">
         <div class="hero-text">
@@ -60,7 +65,7 @@
           </p>
         </div>
         <div class="hero-actions">
-          <a href="#" class="btn btn-primary">[ Ver Quartos ]</a>
+          <a href="pages/quartos.html" class="btn btn-primary">[ Ver Quartos ]</a>
           <a href="#" class="btn btn-secondary">[ Estrutura &amp; Lazer ]</a>
         </div>
       </div>
@@ -68,7 +73,7 @@
 
     <section class="quick-search" aria-label="Busca rápida de disponibilidade">
       <h2 class="quick-search-title">Barra de Busca Rápida</h2>
-      <form class="quick-search-form" action="reserva.html" method="get">
+      <form class="quick-search-form" action="pages/quartos.html" method="get">
         <div class="quick-search-field">
           <label class="quick-search-label" for="checkin">            <i class="fa-solid fa-calendar-days" aria-hidden="true"></i> Entrada (Check-in)</label>
           <div class="quick-search-input-wrap">
@@ -111,7 +116,7 @@
 
         <ul class="rooms-grid">
           <li class="room-card">
-            <img class="room-card-img" src="assets/img/suite-master.svg" alt="Suíte Master do Grand Stay">
+            <img class="room-card-img" src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80&fit=crop" alt="Suíte Master do Grand Stay">
             <div class="room-card-body">
               <p class="overline">até 2 pessoas</p>
               <h3 class="room-card-name">Suíte Master</h3>
@@ -136,13 +141,13 @@
                   <p class="room-card-price-label">a partir de</p>
                   <p class="room-card-price">R$ 1.006 <span>/noite</span></p>
                 </div>
-                <a href="detalhes-quarto.html" class="btn btn-outline">Ver Detalhes</a>
+                <a href="pages/detalhes-quarto.html#suite-master" class="btn btn-outline">Ver Detalhes</a>
               </div>
             </div>
           </li>
 
           <li class="room-card">
-            <img class="room-card-img" src="assets/img/casal-deluxe.svg" alt="Quarto Casal Deluxe do Grand Stay">
+            <img class="room-card-img" src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800&q=80&fit=crop" alt="Quarto Casal Deluxe do Grand Stay">
             <div class="room-card-body">
               <p class="overline">até 2 pessoas</p>
               <h3 class="room-card-name">Quarto Casal Deluxe</h3>
@@ -167,13 +172,13 @@
                   <p class="room-card-price-label">a partir de</p>
                   <p class="room-card-price">R$ 1.290 <span>/noite</span></p>
                 </div>
-                <a href="detalhes-quarto.html" class="btn btn-outline">Ver Detalhes</a>
+                <a href="pages/detalhes-quarto.html#casal" class="btn btn-outline">Ver Detalhes</a>
               </div>
             </div>
           </li>
 
           <li class="room-card">
-            <img class="room-card-img" src="assets/img/bangalo-familia.svg" alt="Bangalô Família do Grand Stay">
+            <img class="room-card-img" src="https://images.unsplash.com/photo-1596436889106-be35e843f974?w=800&q=80&fit=crop" alt="Bangalô Família do Grand Stay">
             <div class="room-card-body">
               <p class="overline">até 4 pessoas</p>
               <h3 class="room-card-name">Bangalô Família</h3>
@@ -198,14 +203,14 @@
                   <p class="room-card-price-label">a partir de</p>
                   <p class="room-card-price">R$ 1.400 <span>/noite</span></p>
                 </div>
-                <a href="detalhes-quarto.html" class="btn btn-outline">Ver Detalhes</a>
+                <a href="pages/detalhes-quarto.html#familia" class="btn btn-outline">Ver Detalhes</a>
               </div>
             </div>
           </li>
         </ul>
 
         <div class="rooms-cta">
-          <a href="quartos.html" class="btn btn-primary">[ Ver Todos os Quartos ]</a>
+          <a href="pages/quartos.html" class="btn btn-primary">[ Ver Todos os Quartos ]</a>
         </div>
       </div>
     </section>
@@ -256,8 +261,8 @@
         </div>
 
         <div class="leisure-img-wrap">
-          <img class="leisure-img" src="assets/img/piscina.svg"
-            alt="Área de piscina do Grand Stay Hotel & Resort com espreguiçadeiras e palmeiras">
+          <img class="leisure-img" src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85&fit=crop"
+            alt="Área de piscina do Grand Stay Hotel &amp; Resort com espreguiçadeiras e palmeiras">
         </div>
       </div>
     </section>

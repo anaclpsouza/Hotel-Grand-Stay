@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quartos | Grand Stay Hotel &amp; Resort</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/quartos.css">
+</head>
+
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo" aria-label="Grand Stay – página inicial">
+        <img src="../assets/icons/Logo.svg" alt="Logo Grand Stay">
+        <div class="nav-logo-text">
+          <span class="nav-logo-name">Grand Stay</span>
+          <span class="nav-logo-sub">Hotel &amp; Resort</span>
+        </div>
+      </a>
+
+      <div class="nav-mobile-actions">
+        <a href="quartos.html" class="btn btn-primary">[ Reservar ]</a>
+        <a href="#" class="btn btn-primary btn-user" aria-label="Perfil do usuário">
+          <i class="fa-solid fa-user" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <input type="checkbox" id="menu-toggle" class="nav-checkbox">
+      <label for="menu-toggle" class="nav-overlay" aria-label="Fechar menu"></label>
+      <label for="menu-toggle" class="nav-toggle" aria-label="Abrir menu">
+        <span></span>
+      </label>
+
+      <nav id="nav-menu" class="nav-menu" aria-label="Menu principal">
+        <ul class="nav-links">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="quartos.html" class="nav-link active">Quartos</a></li>
+          <li><a href="../estrutura.html" class="nav-link">Estrutura</a></li>
+          <li><a href="../experiencias.html" class="nav-link">Experiências</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="quartos.html" class="btn btn-primary">[ Reservar ]</a>
+          <a href="#" class="btn btn-primary btn-user" aria-label="Perfil do usuário">
+            <i class="fa-solid fa-user" aria-hidden="true"></i>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="rooms-page">
+    <section class="rooms-intro" aria-labelledby="rooms-title">
+      <p class="overline"><i class="fa-solid fa-square" aria-hidden="true"></i> Conforto e aconchego</p>
+      <h1 id="rooms-title">Nossas Acomodações</h1>
+      <p class="rooms-intro-text">Estruturas projetadas para conforto, iluminação natural e silêncio. Escolha a configuração ideal para sua estadia.</p>
+    </section>
+
+    <nav class="room-filters" aria-label="Filtrar acomodações">
+      <a class="room-filter room-filter--active" href="quartos.html">[ Todos ]</a>
+      <a class="room-filter" href="#casal">[ Casal ]</a>
+      <a class="room-filter" href="#familia">[ Família ]</a>
+      <a class="room-filter" href="#suite">[ Suíte Luxo ]</a>
+    </nav>
+
+    <section aria-label="Lista de acomodações">
+      <ul class="rooms-page-grid">
+        <li class="room-card" id="suite-panoramica">
+          <img class="room-card-img" src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=800&q=80&fit=crop" alt="Suíte Panorâmica Luxo do Grand Stay com vidraças panorâmicas e piscina aquecida privativa">
+          <div class="room-card-body">
+            <div class="room-card-header">
+              <h3 class="room-card-name">Suíte Panorâmica Luxo</h3>
+              <span class="room-card-badge">70 M²</span>
+            </div>
+            <p class="room-card-desc">Localizada no último pavimento, com vidraças do chão ao teto e piscina aquecida privativa.</p>
+            <ul class="room-card-amenities">
+              <li class="room-card-amenity"><i class="fa-solid fa-wifi" aria-hidden="true"></i> Wi-Fi</li>
+              <li class="room-card-amenity"><i class="fa-solid fa-bed" aria-hidden="true"></i> Cama King</li>
+              <li class="room-card-amenity"><i class="fa-solid fa-snowflake" aria-hidden="true"></i> Ar</li>
+            </ul>
+            <div class="room-card-footer">
+              <div>
+                <p class="room-card-price-label">A partir de</p>
+                <p class="room-card-price">R$ 1.000 <span>/noite</span></p>
+              </div>
+              <a href="detalhes-quarto.html#suite-panoramica" class="btn btn-outline">[ Ver Detalhes ]</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="room-card" id="suite-master">
+          <img class="room-card-img" src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80&fit=crop" alt="Suíte Master do Grand Stay com decoração em madeira e iluminação aconchegante">
+          <div class="room-card-body">
+            <div class="room-card-header">
+              <h3 class="room-card-name">Suíte Master</h3>
+              <span class="room-card-badge">68 M² // PRIVATIVO</span>
+            </div>
+            <p class="room-card-desc">Ambiente amplo com varanda panorâmica, sala de estar independente e banheira de imersão.</p>
+            <ul class="room-card-amenities">
+              <li class="room-card-amenity"><i class="fa-solid fa-wifi" aria-hidden="true"></i> Wi-Fi</li>
+              <li class="room-card-amenity"><i class="fa-solid fa-bed" aria-hidden="true"></i> Cama King</li>
+              <li class="room-card-amenity"><i class="fa-solid fa-snowflake" aria-hidden="true"></i> Ar</li>
+            </ul>
+            <div class="room-card-footer">
+              <div>
+                <p class="room-card-price-label">A partir de</p>
+                <p class="room-card-price">R$ 1.000 <span>/noite</span></p>
+              </div>
+              <a href="detalhes-quarto.html#suite-master" class="btn btn-outline">[ Ver Detalhes ]</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="room-card" id="casal">
+          <img class="room-card-img" src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800&q=80&fit=crop" alt="Quarto Casal Deluxe do Grand Stay com cama de casal e vista para a enseada">
+          <div class="room-card-body">
+            <div class="room-card-header">
+              <h3 class="room-card-name">Quarto Casal Deluxe</h3>
+              <span class="room-card-badge">68 M² // PRIVATIVO</span>
+            </div>
+            <p class="room-card-desc">Equilíbrio perfeito entre conforto e sofisticação, com vista para a enseada e estação de trabalho ergonômica.</p>
+            <ul class="room-card-amenities">
+              <li class="room-card-amenity"><i class="fa-solid fa-wifi" aria-hidden="true"></i> Wi-Fi</li>
+              <li class="room-card-amenity"><i class="fa-solid fa-bed" aria-hidden="true"></i> Cama King</li>
+              <li class="room-card-amenity"><i class="fa-solid fa-snowflake" aria-hidden="true"></i> Ar</li>
+              <li class="room-card-amenity"><i class="fa-solid fa-water" aria-hidden="true"></i> Vista Mar</li>
+            </ul>
+            <div class="room-card-footer">
+              <div>
+                <p class="room-card-price-label">A partir de</p>
+                <p class="room-card-price">R$ 1.250 <span>/noite</span></p>
+              </div>
+              <a href="detalhes-quarto.html#casal" class="btn btn-outline">[ Ver Detalhes ]</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="room-card" id="familia">
+          <img class="room-card-img" src="https://images.unsplash.com/photo-1596436889106-be35e843f974?w=800&q=80&fit=crop" alt="Bangalô Família do Grand Stay cercado por natureza e deck de madeira">
+          <div class="room-card-body">
+            <div class="room-card-header">
+              <h3 class="room-card-name">Bangalô Família</h3>
+              <span class="room-card-badge">68 M² // PRIVATIVO</span>
+            </div>
+            <p class="room-card-desc">Dois quartos privativos, deck de madeira externo, cozinha de apoio compacta e acesso rápido ao jardim central.</p>
+            <ul class="room-card-amenities">
+              <li class="room-card-amenity"><i class="fa-solid fa-wifi" aria-hidden="true"></i> Wi-Fi</li>
+              <li class="room-card-amenity"><i class="fa-solid fa-bed" aria-hidden="true"></i> Cama King</li>
+              <li class="room-card-amenity"><i class="fa-solid fa-snowflake" aria-hidden="true"></i> Ar</li>
+            </ul>
+            <div class="room-card-footer">
+              <div>
+                <p class="room-card-price-label">A partir de</p>
+                <p class="room-card-price">R$ 1.400 <span>/noite</span></p>
+              </div>
+              <a href="detalhes-quarto.html#familia" class="btn btn-outline">[ Ver Detalhes ]</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+
+        <div class="footer-brand">
+          <a href="../index.html" class="footer-logo" aria-label="Grand Stay – página inicial">
+            <img src="../assets/icons/Logo.svg" alt="Logo Grand Stay">
+            <div>
+              <p class="footer-logo-name">Grand Stay</p>
+              <p class="footer-logo-sub">Hotel &amp; Resort</p>
+            </div>
+          </a>
+          <p class="footer-tagline">Sofisticação e conforto em cada detalhe, para uma estadia verdadeiramente inesquecível.</p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Localização</p>
+          <address>
+            Av. Beira Mar, 1500 – Bloco B<br>
+            Grand Stay – CEP 50000-10<br>
+            Recife, PE – Brasil
+          </address>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Contato</p>
+          <p>
+            <a href="tel:+558100000000">Tel: (81) 0000-0000</a><br>
+            <a href="tel:+5581900000000">WhatsApp: (81) 90000-0000</a><br>
+            <a href="mailto:contato@grandstay.com.br">contato@grandstay.com.br</a>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Redes &amp; Canais</p>
+          <nav class="footer-social" aria-label="Redes sociais">
+            <a href="#" aria-label="Instagram do Grand Stay">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="#" aria-label="Facebook do Grand Stay">
+              <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+            </a>
+            <a href="#" aria-label="YouTube do Grand Stay">
+              <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+            </a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Grand Stay Hotel. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

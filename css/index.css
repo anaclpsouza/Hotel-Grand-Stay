@@ -264,12 +264,6 @@
 }
 
 .leisure-content {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.leisure-content {
   display: contents;
 }
 

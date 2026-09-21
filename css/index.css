@@ -5,8 +5,7 @@
 .hero {
   min-height: 0;
   background-color: var(--color-white);
-  padding-top: 48px;
-  margin: 12px 16px;
+  margin-bottom: 32px;
 }
 
 .hero-img {
@@ -22,8 +21,7 @@
 
 .hero-content {
   color: var(--color-secondary);
-  max-width: 760px;
-  align-items: center;
+  width: 100%;
 }
 
 .hero-title {
@@ -54,7 +52,10 @@
 .quick-search {
   background-color: var(--color-white);
   padding: 24px 20px;
-  box-shadow: 0 4px 24px rgba(26, 43, 60, 0.08);
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card-hover);
+  margin-bottom: 40px;
 }
 
 .quick-search-title {
@@ -125,7 +126,8 @@
    ============================================================ */
 
 .section {
-  padding: 24px 20px;
+  padding: 24px 0;
+  margin-bottom: 32px;
 }
 
 .section-header {
@@ -159,9 +161,17 @@
 
 .room-card {
   background-color: var(--color-white);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 16px rgba(26, 43, 60, 0.07);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.room-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--color-primary);
 }
 
 .room-card-img {
@@ -241,8 +251,10 @@
    ============================================================ */
 
 .leisure {
-  padding: 48px 20px;
+  padding: 32px 20px;
   background-color: var(--color-bg-main);
+  border-radius: 12px;
+  margin-bottom: 40px;
 }
 
 .leisure-inner {
@@ -381,6 +393,7 @@
   .quick-search-form {
     flex-direction: row;
     align-items: flex-end;
+    gap: 16px;
   }
 
   .quick-search-field {
@@ -396,34 +409,36 @@
 
   /* Seção */
   .section {
-    padding: 72px 40px;
+    padding: 48px 0;
   }
 
   /* Quartos */
   .rooms-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
   }
 
   /* Lazer */
   .leisure {
-    padding: 72px 40px;
+    padding: 48px 32px;
   }
 
   .leisure-inner {
     flex-direction: row;
     align-items: center;
-    gap: 56px;
+    gap: 40px;
   }
 
   .leisure-content {
     display: flex;
     flex: 1;
+    flex-direction: column;
   }
 
   .leisure-features {
     flex-direction: row;
-    gap: 8px;
+    gap: 12px;
   }
 
   .leisure-feature {
@@ -441,7 +456,7 @@
   }
 
   .leisure-img {
-    height: 420px;
+    height: 380px;
   }
 }
 
@@ -453,71 +468,81 @@
 @media (min-width: 1280px) {
 
   /* Hero */
+  .hero {
+    margin-bottom: 48px;
+  }
+
   .hero-img {
     height: 400px;
   }
 
   .hero-content {
-    padding: 24px 0px 64px;
+    padding: 24px 0px 48px;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
+    justify-content: space-between;
     width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
+    max-width: 100%;
     gap: 48px;
   }
 
   .hero-text {
-    flex: 1;
+    flex: 1 1 70%;
+    max-width: 72%;
     min-width: 0;
-    width: auto;
+    margin-top: 0;
   }
 
   .hero-description {
-    max-width: 680px;
+    max-width: 640px;
+    margin-bottom: 0;
   }
 
   .hero-title {
-    font-size: 56px;
+    font-size: 52px;
+    line-height: 1.15;
   }
 
   .hero-actions {
-    flex-direction: row;
     flex: 0 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
     width: auto;
     margin-left: auto;
+    align-self: flex-end;
+    padding-bottom: 4px;
   }
 
   /* Busca */
   .quick-search {
-    padding: 32px 80px;
+    padding: 32px 40px;
   }
 
   /* Seção */
   .section {
-    padding: 80px 0px;
+    padding: 48px 0px;
   }
 
   .section-inner {
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
   }
 
   /* Quartos */
   .rooms-grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
   }
 
   /* Lazer */
   .leisure {
-    padding: 80px;
+    padding: 48px 40px;
   }
 
   .leisure-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 24px;
+    width: 100%;
+    gap: 48px;
   }
 
   .leisure-content {
@@ -529,6 +554,6 @@
   }
 
   .leisure-img {
-    height: 312px;
+    height: 380px;
   }
 }

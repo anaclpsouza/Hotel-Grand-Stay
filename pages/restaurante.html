@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurante | Grand Stay Hotel &amp; Resort</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/restaurante.css">
+</head>
+
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo" aria-label="Grand Stay – página inicial">
+        <img src="../assets/icons/Logo.svg" alt="Logo Grand Stay">
+        <div class="nav-logo-text">
+          <span class="nav-logo-name">Grand Stay</span>
+          <span class="nav-logo-sub">Hotel &amp; Resort</span>
+        </div>
+      </a>
+
+      <div class="nav-mobile-actions">
+        <a href="reserva.html" class="btn btn-primary">[ Reservar ]</a>
+        <a href="#" class="btn btn-primary btn-user" aria-label="Perfil do usuário">
+          <i class="fa-solid fa-user" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <input type="checkbox" id="menu-toggle" class="nav-checkbox">
+      <label for="menu-toggle" class="nav-overlay" aria-label="Fechar menu"></label>
+      <label for="menu-toggle" class="nav-toggle" aria-label="Abrir menu">
+        <span></span>
+      </label>
+
+      <nav id="nav-menu" class="nav-menu" aria-label="Menu principal">
+        <ul class="nav-links">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="quartos.html" class="nav-link">Quartos</a></li>
+          <li><a href="estrutura.html" class="nav-link">Estrutura</a></li>
+          <li><a href="experiencias.html" class="nav-link">Experiências</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="reserva.html" class="btn btn-primary">[ Reservar ]</a>
+          <a href="#" class="btn btn-primary btn-user" aria-label="Perfil do usuário">
+            <i class="fa-solid fa-user" aria-hidden="true"></i>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="restaurante-intro">
+      <div class="intro-header">
+        <h1>Restaurante Grand Sabor</h1>
+        <p class="body-large page-subtitle">Culinária internacional e brasileira contemporânea, com ingredientes frescos e carta de vinhos assinada.</p>
+      </div>
+
+      <div class="restaurante-gallery">
+        <img class="img-large" src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=1600&q=85&fit=crop" alt="Prato refinado servido no Restaurante Grand Sabor">
+        <img class="img-small" src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=85&fit=crop" alt="Buffet variado">
+        <img class="img-small" src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&q=85&fit=crop" alt="Interior do restaurante elegante">
+      </div>
+    </section>
+
+    <div class="restaurante-content">
+      <section class="restaurante-horarios" aria-labelledby="horarios-title">
+        <h2 id="horarios-title" class="section-title-icon"><i class="fa-regular fa-clock"></i> HORÁRIOS</h2>
+        
+        <div class="horarios-list">
+          <div class="horario-item">
+            <div class="horario-text">
+              <h3>Café da manhã</h3>
+              <p>Buffet executivo e continental completo</p>
+            </div>
+            <div class="horario-time">
+              <span class="time-value">06h30 - 10h30</span>
+              <span class="time-sub">SÁB/DOM ATÉ 11H00</span>
+            </div>
+          </div>
+
+          <div class="horario-item">
+            <div class="horario-text">
+              <h3>Almoço</h3>
+              <p>Menu executivo e serviço à la carte</p>
+            </div>
+            <div class="horario-time">
+              <span class="time-value">12h30 - 15h30</span>
+              <span class="time-sub">SALÃO CENTRAL</span>
+            </div>
+          </div>
+
+          <div class="horario-item">
+            <div class="horario-text">
+              <h3>Jantar</h3>
+              <p>Experiência contemporânea e vinhos</p>
+            </div>
+            <div class="horario-time">
+              <span class="time-value">19h30 - 23h00</span>
+              <span class="time-sub">RESERVA SUGERIDA</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="room-service-card">
+          <div class="rs-icon"><i class="fa-solid fa-bell-concierge"></i></div>
+          <div class="rs-content">
+            <h4>SERVIÇO DE QUARTO DISPONÍVEL 24H</h4>
+            <p>Cardápio noturno reduzido, seleções de conforto, vinhos e bebidas entregues na acomodação com discrição integral.</p>
+            <span class="overline">DIAL DIRETO: RAMAL 9 (RECEPÇÃO / COZINHA)</span>
+          </div>
+        </div>
+
+        <div class="restaurant-policies">
+          <div class="policy-item">
+            <span class="policy-label">TRAJE SUGERIDO</span>
+            <span class="policy-value">[ESPORTE FINO / CASUAL ELEGANTE]</span>
+          </div>
+          <div class="policy-item">
+            <span class="policy-label">POLÍTICA PET</span>
+            <span class="policy-value">[PERMITIDO NA ÁREA EXTERNA]</span>
+          </div>
+          <div class="policy-item">
+            <span class="policy-label">ACESSO NÃO-HÓSPEDES</span>
+            <span class="policy-value">[MEDIANTE RESERVA PRÉVIA]</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="restaurante-menu" aria-labelledby="menu-title">
+        <div class="menu-card">
+          <h2 id="menu-title">DESTAQUES DO MENU</h2>
+          
+          <div class="menu-category">
+            <h3 class="category-title"><i class="fa-solid fa-square"></i> ENTRADAS DA CASA</h3>
+            <div class="menu-items-grid">
+              <div class="menu-item">
+                <div class="menu-item-header">
+                  <h4>Carpaccio de Pupunha Defumado</h4>
+                  <span class="menu-price">R$ 58,00</span>
+                </div>
+                <p>Lâminas finas, azeite trufado de castanhas, brotos orgânicos e raspas de limão cravo.</p>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-header">
+                  <h4>Burrata Artesanal e Focaccia</h4>
+                  <span class="menu-price">R$ 64,00</span>
+                </div>
+                <p>Tomates confitados em ervas da horta, redução balsâmica e pão de fermentação natural.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-category">
+            <h3 class="category-title"><i class="fa-solid fa-square"></i> GRELHADOS NOBRES</h3>
+            <div class="menu-items-grid">
+              <div class="menu-item">
+                <div class="menu-item-header">
+                  <h4>Prime Rib Angus 500g</h4>
+                  <span class="menu-price">R$ 148,00</span>
+                </div>
+                <p>Grelhado na brasa de angico, manteiga de chimichurri fresco e aligot de mandioca rústica.</p>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-header">
+                  <h4>Filet Mignon au Poivre Vert</h4>
+                  <span class="menu-price">R$ 112,00</span>
+                </div>
+                <p>Medalhão alto, molho cremoso de pimenta verde fresca e batatas laminadas assadas.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-category">
+            <h3 class="category-title"><i class="fa-solid fa-square"></i> FRUTOS DO MAR DA ESTAÇÃO</h3>
+            <div class="menu-items-grid">
+              <div class="menu-item">
+                <div class="menu-item-header">
+                  <h4>Robalo em Crosta de Castanhas</h4>
+                  <span class="menu-price">R$ 126,00</span>
+                </div>
+                <p>Filé selado, purê de banana-da-terra grelhada e emulsão cítrica de maracujá nativo.</p>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-header">
+                  <h4>Polvo Grelhado à Lagareiro</h4>
+                  <span class="menu-price">R$ 138,00</span>
+                </div>
+                <p>Tentáculos dourados, batatas ao murro, cebolas caramelizadas e azeite extravirgem aquecido.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-category">
+            <h3 class="category-title"><i class="fa-solid fa-square"></i> VEGETARIANO &amp; VEGANO</h3>
+            <div class="menu-items-grid">
+              <div class="menu-item">
+                <div class="menu-item-header">
+                  <h4>Risoto de Cogumelos Selvagens</h4>
+                  <span class="menu-price">R$ 88,00</span>
+                </div>
+                <p>Arbóreo italiano, mix de cogumelos frescos da serra, tomilho e finalização com azeite de trufas.</p>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-header">
+                  <h4>Gnocchi de Abóbora Tostada (Vegano)</h4>
+                  <span class="menu-price">R$ 82,00</span>
+                </div>
+                <p>Massa artesanal leve, sálvia crocante salteada, nozes pecan picadas e redução suave vegetal.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-footer">
+            <p class="overline">* INFORME RESTRIÇÕES ALIMENTARES OU ALERGIAS AO SEU ATENDENTE. TAXA DE SERVIÇO (10%) OPCIONAL.</p>
+            <p class="overline">CARTA COMPLETA DISPONÍVEL VIA QR CODE DE MESA.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="restaurante-cta section--alt">
+      <div class="cta-text">
+        <h2>Desfrute do melhor da gastronomia</h2>
+        <p>Hóspedes do Grand Stay contam com café da manhã cortesia e reservas prioritárias.</p>
+      </div>
+      <a href="quartos.html" class="btn btn-primary">[ Ver Quartos ]</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+
+        <div class="footer-brand">
+          <a href="../index.html" class="footer-logo" aria-label="Grand Stay – página inicial">
+            <img src="../assets/icons/Logo.svg" alt="Logo Grand Stay">
+            <div>
+              <p class="footer-logo-name">Grand Stay</p>
+              <p class="footer-logo-sub">Hotel &amp; Resort</p>
+            </div>
+          </a>
+          <p class="footer-tagline">Sofisticação e conforto em cada detalhe, para uma estadia verdadeiramente
+            inesquecível.</p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Localização</p>
+          <address>
+            Av. Beira Mar, 1500 – Bloco B<br>
+            Grand Stay – CEP 50000-10<br>
+            Recife, PE – Brasil
+          </address>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Contato</p>
+          <p>
+            <a href="tel:+558100000000">Tel: (81) 0000-0000</a><br>
+            <a href="tel:+5581900000000">WhatsApp: (81) 90000-0000</a><br>
+            <a href="mailto:contato@grandstay.com.br">contato@grandstay.com.br</a>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Redes &amp; Canais</p>
+          <nav class="footer-social" aria-label="Redes sociais">
+            <a href="#" aria-label="Instagram do Grand Stay">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="#" aria-label="Facebook do Grand Stay">
+              <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+            </a>
+            <a href="#" aria-label="YouTube do Grand Stay">
+              <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+            </a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Grand Stay Hotel. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

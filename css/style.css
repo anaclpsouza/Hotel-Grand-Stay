@@ -145,6 +145,10 @@ p {
   line-height: 1.5;
 }
 
+.page-subtitle {
+  color: var(--color-text-muted);
+}
+
 .button-text {
   font-family: var(--font-body);
   font-size: 14px;
@@ -559,6 +563,35 @@ p {
   .button-text   { font-size: 15px; }
   .overline      { font-size: 12px; }
 
+
+  main {
+    margin: 24px 32px;
+  }
+
+  /* Footer */
+  .footer-top {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    padding-bottom: 40px;
+  }
+
+  .footer-brand {
+    gap: 16px;
+  }
+
+  .footer-inner {
+    padding: 48px 32px 24px;
+  }
+
+  .footer-bottom {
+    padding-top: 24px;
+  }
+}
+
+/* ============================================================
+   TABLET LANDSCAPE / SMALL DESKTOP
+   ============================================================ */
+@media (min-width: 1024px) {
   .nav-toggle,
   .nav-checkbox,
   .nav-overlay {
@@ -638,29 +671,6 @@ p {
   .nav-mobile-actions {
     display: none;
   }
-
-  main {
-    margin: 24px 32px;
-  }
-
-  /* Footer */
-  .footer-top {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
-    padding-bottom: 40px;
-  }
-
-  .footer-brand {
-    gap: 16px;
-  }
-
-  .footer-inner {
-    padding: 48px 32px 24px;
-  }
-
-  .footer-bottom {
-    padding-top: 24px;
-  }
 }
 
 
@@ -671,7 +681,7 @@ p {
   main {
     width: 100%;
     max-width: 1440px;
-    margin: 36px auto 48px;
+    margin: 56px auto 48px;
     padding: 0 40px;
   }
 

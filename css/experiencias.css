@@ -1,0 +1,160 @@
+/* ============================================================
+   EXPERIÊNCIAS 
+   ============================================================ */
+
+.experiences-hero {
+  margin-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.experiences-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.experiences-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.experiences-gallery img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+/* ============================================================
+   CATÁLOGO DE ATIVIDADES
+   ============================================================ */
+
+.activities-catalog {
+  margin-bottom: 64px;
+}
+
+.activities-catalog h2 {
+  margin-bottom: 32px;
+}
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.activity-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.activity-img {
+  width: 100%;
+  aspect-ratio: 2/1;
+  object-fit: cover;
+}
+
+.activity-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.activity-body h3 {
+  margin-bottom: 8px;
+}
+
+.activity-desc {
+  margin-bottom: 16px;
+}
+
+.activity-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: var(--fw-medium);
+  color: var(--color-secondary);
+}
+
+.activity-info li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.activity-price {
+  margin-top: auto;
+}
+
+.activity-price .overline {
+  margin-bottom: 4px;
+}
+
+.activity-price .price-value {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: var(--fw-bold);
+  color: var(--color-secondary);
+}
+
+/* ============================================================
+   CTA
+   ============================================================ */
+
+.experiences-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 48px 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.experiences-cta-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ============================================================
+   TABLET - min-width: 768px
+   ============================================================ */
+
+@media (min-width: 768px) {
+  .experiences-gallery img {
+    height: 200px;
+  }
+
+  .experiences-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .experiences-gallery .img-large {
+    grid-column: 1 / -1;
+    height: 400px;
+  }
+
+  .activities-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px 32px;
+  }
+
+  .activity-img {
+    aspect-ratio: 16/9;
+  }
+
+  .experiences-cta {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .experiences-cta-content {
+    max-width: 60%;
+  }
+}

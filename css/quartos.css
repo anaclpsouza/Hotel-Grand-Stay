@@ -223,10 +223,6 @@
    ============================================================ */
 
 @media (min-width: 1280px) {
-  .rooms-page {
-    margin-top: 56px;
-  }
-
   .rooms-intro {
     max-width: 600px;
   }

@@ -145,6 +145,10 @@ p {
   line-height: 1.5;
 }
 
+.page-subtitle {
+  color: var(--color-text-muted);
+}
+
 .button-text {
   font-family: var(--font-body);
   font-size: 14px;
@@ -671,7 +675,7 @@ p {
   main {
     width: 100%;
     max-width: 1440px;
-    margin: 36px auto 48px;
+    margin: 56px auto 48px;
     padding: 0 40px;
   }
 

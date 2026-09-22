@@ -71,7 +71,7 @@
 .card-icon {
   width: 32px;
   height: 32px;
-  background-color: #d8c4ad; 
+  background-color: var(--color-primary); 
   color: var(--color-secondary);
   display: flex;
   align-items: center;

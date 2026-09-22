@@ -1,0 +1,327 @@
+/* ============================================================
+   RESTAURANTE
+   ============================================================ */
+
+.restaurante-intro {
+  margin-bottom: 40px;
+}
+
+.intro-header {
+  margin-bottom: 24px;
+}
+
+.restaurante-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.restaurante-gallery img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.restaurante-gallery .img-large {
+  grid-column: 1 / -1;
+  height: 240px;
+}
+
+.restaurante-gallery .img-small {
+  height: 140px;
+}
+
+/* ============================================================
+   CONTEÚDO PRINCIPAL (HORÁRIOS & MENU)
+   ============================================================ */
+.restaurante-content {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+/* --- HORÁRIOS --- */
+.section-title-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.section-title-icon i {
+  font-size: 24px;
+}
+
+.horarios-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.horario-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.horario-text {
+  flex: 1;
+}
+
+.horario-text h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.horario-text p {
+  color: var(--color-text-muted);
+  font-size: 12px;
+}
+
+.horario-time {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.time-value {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: var(--fw-bold);
+  color: var(--color-secondary);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.time-sub {
+  font-family: var(--font-body);
+  font-size: 10px;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Serviço de Quarto Card */
+.room-service-card {
+  display: flex;
+  gap: 16px;
+  background-color: var(--color-bg-main);
+  padding: 16px;
+  border-radius: 4px;
+  margin-bottom: 32px;
+}
+
+.rs-icon i {
+  font-size: 20px;
+  color: var(--color-secondary);
+}
+
+.rs-content h4 {
+  font-size: 13px;
+  margin-bottom: 8px;
+  color: var(--color-secondary);
+}
+
+.rs-content p {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-bottom: 12px;
+}
+
+.rs-content .overline {
+  margin-bottom: 0;
+}
+
+/* Políticas do Restaurante */
+.restaurant-policies {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.policy-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 12px;
+}
+
+.policy-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.policy-label {
+  font-size: 11px;
+  font-weight: var(--fw-bold);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.policy-value {
+  font-size: 11px;
+  font-weight: var(--fw-bold);
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: right;
+}
+
+/* --- DESTAQUES DO MENU --- */
+.menu-card {
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+  padding: 24px 16px;
+  border-radius: 4px;
+  background-color: var(--color-white);
+}
+
+.menu-card > h2 {
+  text-align: center;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 32px;
+}
+
+.menu-category {
+  margin-bottom: 32px;
+}
+
+.category-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: var(--fw-bold);
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+
+.category-title i {
+  font-size: 10px;
+  color: var(--color-primary);
+}
+
+.menu-items-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 4px;
+}
+
+.menu-item-header h4 {
+  font-size: 14px;
+  color: var(--color-secondary);
+}
+
+.menu-price {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: var(--fw-bold);
+  color: var(--color-secondary);
+  white-space: nowrap;
+}
+
+.menu-item p {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.menu-footer {
+  border-top: 1px solid var(--color-border);
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+}
+
+/* ============================================================
+   CTA
+   ============================================================ */
+.restaurante-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  text-align: center;
+  padding: 48px 24px;
+  border-radius: 8px;
+}
+
+.cta-text h2 {
+  margin-bottom: 12px;
+}
+
+.cta-text p {
+  color: var(--color-text-muted);
+}
+
+/* ============================================================
+   TABLET - min-width: 768px
+   ============================================================ */
+@media (min-width: 768px) {
+  .restaurante-gallery .img-large {
+    height: 400px;
+  }
+
+  .restaurante-gallery .img-small {
+    height: 240px;
+  }
+
+  .menu-card {
+    padding: 32px;
+  }
+
+  .menu-items-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .restaurante-cta {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+/* ============================================================
+   DESKTOP - min-width: 1280px
+   ============================================================ */
+@media (min-width: 1280px) {
+  .restaurante-gallery {
+    gap: 24px;
+  }
+
+  .restaurante-content {
+    flex-direction: row;
+    gap: 64px;
+    align-items: flex-start;
+  }
+
+  .restaurante-horarios {
+    flex: 1;
+  }
+
+  .restaurante-menu {
+    flex: 1.5;
+  }
+}

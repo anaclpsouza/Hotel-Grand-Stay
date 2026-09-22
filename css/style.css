@@ -88,6 +88,7 @@ ul, ol {
 a {
   text-decoration: none;
   color: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 
@@ -262,7 +263,7 @@ p {
 
 .nav-logo-name {
   font-family: var(--font-heading);
-  font-size: 16px;
+  font-size: 32px;
   font-weight: var(--fw-bold);
   color: var(--color-secondary);
   line-height: 1.1;
@@ -359,11 +360,12 @@ p {
 }
 
 .nav-link {
+  display: block;
   font-family: var(--font-body);
   font-size: 20px;
   font-weight: var(--fw-semibold);
   color: var(--color-secondary);
-  padding: 18px 0;
+  padding: 8px 0;
   transition: color 0.2s ease;
 }
 
@@ -584,7 +586,7 @@ p {
 
   .nav-link {
     position: relative;
-    font-size: 14px;
+    font-size: 16px;
     padding: 8px 16px 10px;
     border-bottom: none;
   }

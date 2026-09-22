@@ -416,10 +416,6 @@
 }
 
 @media (min-width: 1280px) {
-  .room-details-page {
-    margin-top: 56px;
-  }
-
   .room-gallery-main {
     height: 500px;
   }

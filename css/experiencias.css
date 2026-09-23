@@ -15,17 +15,7 @@
   gap: 16px;
 }
 
-.experiences-gallery {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-}
 
-.experiences-gallery img {
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-}
 
 /* ============================================================
    CATÁLOGO DE ATIVIDADES
@@ -126,19 +116,6 @@
    ============================================================ */
 
 @media (min-width: 768px) {
-  .experiences-gallery img {
-    height: 200px;
-  }
-
-  .experiences-gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .experiences-gallery .img-large {
-    grid-column: 1 / -1;
-    height: 400px;
-  }
-
   .activities-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 48px 32px;

@@ -10,26 +10,7 @@
   margin-bottom: 24px;
 }
 
-.restaurante-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-}
 
-.restaurante-gallery img {
-  width: 100%;
-  object-fit: cover;
-  border-radius: 4px;
-}
-
-.restaurante-gallery .img-large {
-  grid-column: 1 / -1;
-  height: 240px;
-}
-
-.restaurante-gallery .img-small {
-  height: 140px;
-}
 
 /* ============================================================
    CONTEÚDO PRINCIPAL (HORÁRIOS & MENU)

@@ -15,32 +15,7 @@
   max-width: 600px;
 }
 
-.hero-images {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
 
-.img-main,
-.img-sub {
-  width: 100%;
-  object-fit: cover;
-  border-radius: 4px;
-}
-
-.img-main {
-  height: 240px;
-}
-
-.img-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-.img-sub {
-  height: 140px;
-}
 
 
 /* ============================================================
@@ -211,13 +186,7 @@
     margin-bottom: 32px;
   }
   
-  .img-main {
-    height: 400px;
-  }
-  
-  .img-sub {
-    height: 240px;
-  }
+
   
   .info-cards {
     flex-direction: row;
@@ -262,22 +231,7 @@
    DESKTOP — min-width: 1280px
    ============================================================ */
 @media (min-width: 1280px) {
-  .hero-images {
-    gap: 24px;
-  }
 
-  .img-main {
-    height: 460px; 
-  }
-  
-  .img-row {
-    gap: 24px;
-    height: auto;
-  } 
-  
-  .img-sub {
-    height: 280px;
-  }
   
   .info-cards {
     flex-wrap: nowrap;

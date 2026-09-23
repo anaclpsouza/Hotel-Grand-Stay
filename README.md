@@ -1,131 +1,30 @@
-Fluxo → Wireframe → UI no Figma → Protótipo navegável → HTML/CSS
+# Grand Stay Hotel & Resort
 
-# Etapa 1 — Fluxo do usuário (Exemplo)
+## Objetivo
+O objetivo deste projeto é criar o site do **Hotel Grand Stay**, contendo as seguintes páginas estáticas interligadas:
+- Home
+- Quartos
+- Detalhes do quarto
+- Restaurante
+- Estrutura
+- Piscina / Lazer
+- Experiências
+- Reserva
+- Confirmação
 
-### Por exemplo, para uma hamburgueria:
+*Nota: O sistema de reservas é puramente visual (front-end estático), sem funcionamento de backend real.*
 
-### Fluxo principal - Usuário quer fazer um pedido
+## Fluxo Principal do Usuário
+Home → Quartos → Detalhes do quarto → Reserva → Confirmação
 
-Home
-  ↓
-Cardápio
-  ↓
-Produto
-  ↓
-Adicionar ao carrinho
-  ↓
-Carrinho
-  ↓
-Identificação
-  ↓
-Endereço
-  ↓
-Pagamento
-  ↓
-Pedido confirmado
+## Fluxo Secundário
 
-### fluxo secundário
+Home → Estrutura → Piscina/ Restaurante / Experiências → Quartos 
 
-Home
-  ↓
-Cardápio
-  ↓
-Produto
-  ↓
-Avaliações
-  ↓
-Voltar para produto
+## Como executar o projeto
+Por se tratar de um projeto puramente construído com **HTML e CSS estáticos**, a execução é muito simples:
+1. Navegue até a pasta raiz do projeto.
+2. Abra o arquivo `index.html` diretamente em qualquer navegador web.
+3. (Opcional) Para uma melhor experiência de desenvolvimento, você pode utilizar extensões como o **Live Server** (do VSCode) para rodar o projeto em um servidor local e visualizar alterações em tempo real.
 
----
-
-#Etapa 2 — Wireframe (Exemplo)
-Wireframe não pode ter preocupação estética.
-
-A ideia é representar:
-
-<img width="245" height="308" alt="image" src="https://github.com/user-attachments/assets/a4c0c9fc-d64f-448c-b26e-679f16b909b6" />
-
-
-E todas as telas precisam estar identificadas:
-
-Home
-Produtos
-Produto
-Carrinho
-Checkout
-etc.
-
-# Etapa 3 — UI Design (Exemplo)
-
-## Design System
-
-### Cores
-Primária
-Secundária
-Background
-Texto
-Texto secundário
-Erro
-Sucesso
-
-### Tipografia
-H1
-H2
-H3
-Body
-Button
-
-### Componentes
-Botão primário
-Botão secundário
-Input
-Card
-Navbar
-Footer
-
-# Etapa 4 — Protótipo navegável
-
-Exemplo:
-
-Home
-
-[Ver produtos]
-
-↓
-
-Produtos
-
-[Hambúrguer X]
-
-↓
-
-Produto
-
-[Adicionar ao carrinho]
-
-↓
-
-Carrinho
-
-[Finalizar pedido]
-
-↓
-
-Checkout
-
-[Confirmar pedido]
-
-↓
-
-Sucesso
-
-# Etapa 5 — Transformar Figma em HTML/CSS
-
-"Agora transforme o seu próprio design em código."
-
-HTML
-CSS
-Flexbox
-Grid
-Media Queries
-HTML semântico
+**Design no Figma:** [Visualizar Projeto](https://www.figma.com/design/gSw6WEbjAZgG7neVbFadZT/Hotel---Grand-Stay?node-id=0-1&t=wqwCyrQJHtc1VtKR-1)

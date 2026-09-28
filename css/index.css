@@ -4,7 +4,7 @@
 
 .hero {
   min-height: 0;
-  background-color: var(--color-white);
+  background-color: transparent;
   margin-bottom: 32px;
 }
 
@@ -145,7 +145,7 @@
 }
 
 .section--alt {
-  background-color: var(--color-white);
+  background-color: var(--color-bg-main);
 }
 
 

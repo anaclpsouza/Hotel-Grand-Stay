@@ -22,6 +22,7 @@
   --color-secondary:        #1A2B3C;
   --color-secondary-hover:  #263E57;
   --color-bg-main:          #F5EFE6;
+  --color-bg-light:         #FAF8F5;
   --color-text-muted:       #767E86;
   --color-sucess:           #2E7D32;
   --color-error:            #C62828;
@@ -64,7 +65,7 @@ body {
   min-height: 100vh;
 
   color: var(--color-secondary);
-  background-color: var(--color-white);
+  background-color: var(--color-bg-light);
 
   display: flex;
   flex-direction: column;

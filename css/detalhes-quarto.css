@@ -6,8 +6,6 @@
   min-width: 0;
   margin: 0 auto;
   width: 100%;
-  padding-top: 96px;
-  padding-bottom: 40px;
 }
 
 .room-details-container {
@@ -421,8 +419,7 @@
 
 @media (min-width: 1280px) {
   .room-details-page {
-    padding-top: 128px;
-    padding-bottom: 80px;
+    margin-top: 56px;
   }
 
   .room-gallery-main {
